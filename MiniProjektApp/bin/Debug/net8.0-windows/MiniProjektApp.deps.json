@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "MiniProjektApp/1.0.0": {
+        "dependencies": {
+          "MiniProjekt": "1.0.0"
+        },
+        "runtime": {
+          "MiniProjektApp.dll": {}
+        }
+      },
+      "MiniProjekt/1.0.0": {
+        "runtime": {
+          "MiniProjekt.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MiniProjektApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MiniProjekt/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

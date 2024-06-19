@@ -1,0 +1,12 @@
+D:\inf\semestr 6\PZ\miniprojekt\obj\Debug\net8.0\MiniProjekt.GeneratedMSBuildEditorConfig.editorconfig
+D:\inf\semestr 6\PZ\miniprojekt\obj\Debug\net8.0\MiniProjekt.AssemblyInfoInputs.cache
+D:\inf\semestr 6\PZ\miniprojekt\obj\Debug\net8.0\MiniProjekt.AssemblyInfo.cs
+D:\inf\semestr 6\PZ\miniprojekt\obj\Debug\net8.0\MiniProjekt.csproj.CoreCompileInputs.cache
+D:\inf\semestr 6\PZ\miniprojekt\obj\Debug\net8.0\MiniProjekt.sourcelink.json
+D:\inf\semestr 6\PZ\miniprojekt\bin\Debug\net8.0\MiniProjekt.deps.json
+D:\inf\semestr 6\PZ\miniprojekt\bin\Debug\net8.0\MiniProjekt.dll
+D:\inf\semestr 6\PZ\miniprojekt\bin\Debug\net8.0\MiniProjekt.pdb
+D:\inf\semestr 6\PZ\miniprojekt\obj\Debug\net8.0\MiniProjekt.dll
+D:\inf\semestr 6\PZ\miniprojekt\obj\Debug\net8.0\refint\MiniProjekt.dll
+D:\inf\semestr 6\PZ\miniprojekt\obj\Debug\net8.0\MiniProjekt.pdb
+D:\inf\semestr 6\PZ\miniprojekt\obj\Debug\net8.0\ref\MiniProjekt.dll
