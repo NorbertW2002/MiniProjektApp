@@ -9,10 +9,15 @@ namespace MiniProjekt
     public class Sawmill:Building
     {
         public int GenerateWoodPerTime { get; set; }
+        public int MaxWoodPerTime { get; set; }
+
+        public int Time { get; set; }
 
         public Sawmill(string Name, int Level):base(Name, Level)
         {
             this.GenerateWoodPerTime = 10;
+            this.MaxWoodPerTime = 500;
+            this.Time = 30;
         }
 
         public Sawmill() : base()

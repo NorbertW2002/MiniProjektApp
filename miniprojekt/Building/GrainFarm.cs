@@ -9,10 +9,14 @@ namespace MiniProjekt
     public class GrainFarm:Building
     {
         public int GenerateWheatPerTime { get; set; }
+        public int MaxFarmPerTime { get; set; }
 
+        public int Time { get; set; }
         public GrainFarm(string Name, int Level):base(Name, Level)
         {
             this.GenerateWheatPerTime = 10;
+            this.Time = 40;
+            this.MaxFarmPerTime = 500;
         }
 
         public GrainFarm() : base()

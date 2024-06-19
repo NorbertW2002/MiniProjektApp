@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MiniProjekt.Enum;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,8 +14,9 @@ namespace MiniProjekt
         public int CurrentExperience { get; set; }
         public List<Resource> Resources { get; set; }
         public Fraction? Fraction { get; set; }
-        public List<Village> Villages { get; set; } 
-
+        public List<Village> Villages { get; set; }
+        public event PlayerExpAction OnExpGained;
+        public event PlayerAction OnLvlGained;
         public Player(string Name, int Level, int CurrentExperience, List<Resource> resources, Fraction fraction, List<Village> villages)
         {
             this.Name = Name;
@@ -53,6 +55,7 @@ namespace MiniProjekt
         public void AddExp(int exp)
         {
             CurrentExperience += exp;
+            OnExpGained?.Invoke(this, exp);
             CheckLevel();
         }
 
@@ -63,6 +66,7 @@ namespace MiniProjekt
             {
                 CurrentExperience -= requiredExp;
                 Level++;
+                OnLvlGained?.Invoke(this);
                 requiredExp = CalculateRequiredExperience(Level);
             }
         }

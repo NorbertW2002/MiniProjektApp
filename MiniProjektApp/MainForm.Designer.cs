@@ -80,6 +80,7 @@
             groupBox5 = new GroupBox();
             ResourcesForBuilding = new ListBox();
             SawMill = new PictureBox();
+            GrainFarm = new PictureBox();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -102,6 +103,7 @@
             groupBox4.SuspendLayout();
             groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)SawMill).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)GrainFarm).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -288,9 +290,9 @@
             ExpToLevel.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 238);
             ExpToLevel.Location = new Point(491, 29);
             ExpToLevel.Name = "ExpToLevel";
-            ExpToLevel.Size = new Size(22, 25);
+            ExpToLevel.Size = new Size(50, 25);
             ExpToLevel.TabIndex = 11;
-            ExpToLevel.Text = "e";
+            ExpToLevel.Text = "0/20";
             // 
             // PlayerExp
             // 
@@ -634,12 +636,25 @@
             SawMill.Visible = false;
             SawMill.Click += SawMill_Click;
             // 
+            // GrainFarm
+            // 
+            GrainFarm.BackgroundImage = Properties.Resources.map8;
+            GrainFarm.Image = Properties.Resources.grainfarm1;
+            GrainFarm.Location = new Point(766, 399);
+            GrainFarm.Name = "GrainFarm";
+            GrainFarm.Size = new Size(50, 50);
+            GrainFarm.TabIndex = 17;
+            GrainFarm.TabStop = false;
+            GrainFarm.Visible = false;
+            GrainFarm.Click += GrainFarm_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Snow;
             ClientSize = new Size(1115, 834);
+            Controls.Add(GrainFarm);
             Controls.Add(SawMill);
             Controls.Add(groupBox5);
             Controls.Add(groupBox4);
@@ -681,6 +696,7 @@
             groupBox4.ResumeLayout(false);
             groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)SawMill).EndInit();
+            ((System.ComponentModel.ISupportInitialize)GrainFarm).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -738,5 +754,6 @@
         private ListBox ResourcesForBuilding;
         private Label ExpToLevel;
         private PictureBox SawMill;
+        private PictureBox GrainFarm;
     }
 }
