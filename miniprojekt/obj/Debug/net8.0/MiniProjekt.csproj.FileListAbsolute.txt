@@ -10,3 +10,15 @@ D:\inf\semestr 6\PZ\miniprojekt\obj\Debug\net8.0\MiniProjekt.dll
 D:\inf\semestr 6\PZ\miniprojekt\obj\Debug\net8.0\refint\MiniProjekt.dll
 D:\inf\semestr 6\PZ\miniprojekt\obj\Debug\net8.0\MiniProjekt.pdb
 D:\inf\semestr 6\PZ\miniprojekt\obj\Debug\net8.0\ref\MiniProjekt.dll
+C:\Users\nw862\Source\Repos\MiniProjektApp\miniprojekt\bin\Debug\net8.0\MiniProjekt.deps.json
+C:\Users\nw862\Source\Repos\MiniProjektApp\miniprojekt\bin\Debug\net8.0\MiniProjekt.dll
+C:\Users\nw862\Source\Repos\MiniProjektApp\miniprojekt\bin\Debug\net8.0\MiniProjekt.pdb
+C:\Users\nw862\Source\Repos\MiniProjektApp\miniprojekt\obj\Debug\net8.0\MiniProjekt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nw862\Source\Repos\MiniProjektApp\miniprojekt\obj\Debug\net8.0\MiniProjekt.AssemblyInfoInputs.cache
+C:\Users\nw862\Source\Repos\MiniProjektApp\miniprojekt\obj\Debug\net8.0\MiniProjekt.AssemblyInfo.cs
+C:\Users\nw862\Source\Repos\MiniProjektApp\miniprojekt\obj\Debug\net8.0\MiniProjekt.csproj.CoreCompileInputs.cache
+C:\Users\nw862\Source\Repos\MiniProjektApp\miniprojekt\obj\Debug\net8.0\MiniProjekt.sourcelink.json
+C:\Users\nw862\Source\Repos\MiniProjektApp\miniprojekt\obj\Debug\net8.0\MiniProjekt.dll
+C:\Users\nw862\Source\Repos\MiniProjektApp\miniprojekt\obj\Debug\net8.0\refint\MiniProjekt.dll
+C:\Users\nw862\Source\Repos\MiniProjektApp\miniprojekt\obj\Debug\net8.0\MiniProjekt.pdb
+C:\Users\nw862\Source\Repos\MiniProjektApp\miniprojekt\obj\Debug\net8.0\ref\MiniProjekt.dll

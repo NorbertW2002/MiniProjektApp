@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\inf\\semestr 6\\PZ\\miniprojekt\\MiniProjekt.csproj",
+      "projectUniqueName": "C:\\Users\\nw862\\Source\\Repos\\MiniProjektApp\\miniprojekt\\MiniProjekt.csproj",
       "projectName": "MiniProjekt",
-      "projectPath": "D:\\inf\\semestr 6\\PZ\\miniprojekt\\MiniProjekt.csproj",
+      "projectPath": "C:\\Users\\nw862\\Source\\Repos\\MiniProjektApp\\miniprojekt\\MiniProjekt.csproj",
       "packagesPath": "C:\\Users\\nw862\\.nuget\\packages\\",
-      "outputPath": "D:\\inf\\semestr 6\\PZ\\miniprojekt\\obj\\",
+      "outputPath": "C:\\Users\\nw862\\Source\\Repos\\MiniProjektApp\\miniprojekt\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nw862\\AppData\\Roaming\\NuGet\\NuGet.Config",
