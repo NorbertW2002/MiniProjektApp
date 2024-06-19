@@ -81,6 +81,8 @@
             ResourcesForBuilding = new ListBox();
             SawMill = new PictureBox();
             GrainFarm = new PictureBox();
+            StoneMine = new PictureBox();
+            IronMine = new PictureBox();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -104,6 +106,8 @@
             groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)SawMill).BeginInit();
             ((System.ComponentModel.ISupportInitialize)GrainFarm).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)StoneMine).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)IronMine).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -364,6 +368,7 @@
             TownHall.TabIndex = 11;
             TownHall.TabStop = false;
             TownHall.Click += TownHall_Click;
+            TownHall.Paint += TownHall_Paint;
             // 
             // Villages
             // 
@@ -635,6 +640,7 @@
             SawMill.TabStop = false;
             SawMill.Visible = false;
             SawMill.Click += SawMill_Click;
+            SawMill.Paint += SawMill_Paint;
             // 
             // GrainFarm
             // 
@@ -647,6 +653,32 @@
             GrainFarm.TabStop = false;
             GrainFarm.Visible = false;
             GrainFarm.Click += GrainFarm_Click;
+            GrainFarm.Paint += GrainFarm_Paint;
+            // 
+            // StoneMine
+            // 
+            StoneMine.BackgroundImage = Properties.Resources.map9;
+            StoneMine.Image = Properties.Resources.stonemine;
+            StoneMine.Location = new Point(560, 399);
+            StoneMine.Name = "StoneMine";
+            StoneMine.Size = new Size(50, 50);
+            StoneMine.TabIndex = 18;
+            StoneMine.TabStop = false;
+            StoneMine.Visible = false;
+            StoneMine.Click += StoneMine_Click;
+            StoneMine.Paint += StoneMine_Paint;
+            // 
+            // IronMine
+            // 
+            IronMine.BackgroundImage = Properties.Resources.map10;
+            IronMine.Image = Properties.Resources.ironmine;
+            IronMine.Location = new Point(339, 267);
+            IronMine.Name = "IronMine";
+            IronMine.Size = new Size(50, 50);
+            IronMine.TabIndex = 19;
+            IronMine.TabStop = false;
+            IronMine.Visible = false;
+            IronMine.Click += IronMine_Click;
             // 
             // MainForm
             // 
@@ -654,6 +686,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Snow;
             ClientSize = new Size(1115, 834);
+            Controls.Add(IronMine);
+            Controls.Add(StoneMine);
             Controls.Add(GrainFarm);
             Controls.Add(SawMill);
             Controls.Add(groupBox5);
@@ -697,6 +731,8 @@
             groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)SawMill).EndInit();
             ((System.ComponentModel.ISupportInitialize)GrainFarm).EndInit();
+            ((System.ComponentModel.ISupportInitialize)StoneMine).EndInit();
+            ((System.ComponentModel.ISupportInitialize)IronMine).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -755,5 +791,7 @@
         private Label ExpToLevel;
         private PictureBox SawMill;
         private PictureBox GrainFarm;
+        private PictureBox StoneMine;
+        private PictureBox IronMine;
     }
 }

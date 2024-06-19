@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MiniProjekt")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aac527c50aa029d3e4b980f9b07ce474c1b30b74")]
 [assembly: System.Reflection.AssemblyProductAttribute("MiniProjekt")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MiniProjekt")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

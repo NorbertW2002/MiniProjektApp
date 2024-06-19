@@ -163,6 +163,16 @@ namespace MiniProjektApp.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ironmine {
+            get {
+                object obj = ResourceManager.GetObject("ironmine", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap kamikaze {
             get {
                 object obj = ResourceManager.GetObject("kamikaze", resourceCulture);
@@ -186,6 +196,16 @@ namespace MiniProjektApp.Properties {
         internal static System.Drawing.Bitmap map1 {
             get {
                 object obj = ResourceManager.GetObject("map1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap map10 {
+            get {
+                object obj = ResourceManager.GetObject("map10", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,6 +283,16 @@ namespace MiniProjektApp.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap map9 {
+            get {
+                object obj = ResourceManager.GetObject("map9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sawmill {
             get {
                 object obj = ResourceManager.GetObject("sawmill", resourceCulture);
@@ -276,6 +306,16 @@ namespace MiniProjektApp.Properties {
         internal static System.Drawing.Bitmap stone {
             get {
                 object obj = ResourceManager.GetObject("stone", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stonemine {
+            get {
+                object obj = ResourceManager.GetObject("stonemine", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

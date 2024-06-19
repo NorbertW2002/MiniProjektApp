@@ -118,32 +118,65 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="catapult" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\catapult.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="map6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\map.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gold" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\gold.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="map" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="map2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\map.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="warrior" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\warrior.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="map3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\map.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hussar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\hussar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="grainfarm1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\grainfarm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gold1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\gold.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="catapult" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\catapult.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="stone" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\stone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="city_hall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\city_hall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wood" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\wood.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="map5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\map.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="grainfarm1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\grainfarm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="archer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\archer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sawmill" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\sawmill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="map9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\map.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ironmine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\ironmine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="map4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\map.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hussar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\hussar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="map1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\map.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kamikaze" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\kamikaze.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="grainfarm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\grainfarm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iron" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\iron.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="city_hall1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\city_hall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,49 +184,28 @@
   <data name="wheat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\wheat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="map4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="map8" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\map.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="map6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\map.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="stonemine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\stonemine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sawmill" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\sawmill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gold1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\gold.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wood" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\wood.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="grainfarm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\grainfarm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="archer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\archer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="map2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\map.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="map1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\map.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="map3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\map.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="kamikaze" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\kamikaze.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="trojan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\trojan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="city_hall" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\city_hall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iron" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\iron.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="warrior" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\warrior.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="map7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\map.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="map8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="map" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\map.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trojan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\trojan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="map10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\map.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

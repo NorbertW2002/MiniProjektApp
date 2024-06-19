@@ -12,9 +12,12 @@ namespace MiniProjektApp
         private System.Windows.Forms.Timer StoneTimer;
         private System.Windows.Forms.Timer GrainTimer;
         private System.Windows.Forms.Timer WoodTimer;
+        public static int timeDelay = 100;
         public MainForm()
         {
             InitializeComponent();
+            AddClickEventToAllControls(this.Controls);
+            this.Click += new EventHandler(Form_Click);
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -62,7 +65,45 @@ namespace MiniProjektApp
             GoldTimer.Interval = interval;
             GoldTimer.Enabled = true;
             GoldTimer.Tick += generateGold;
-
+        }
+        private void AddClickEventToAllControls(Control.ControlCollection controls)
+        {
+            foreach (Control control in controls)
+            {
+                control.Click += new EventHandler(Form_Click);
+                if (control.Controls.Count > 0)
+                {
+                    AddClickEventToAllControls(control.Controls); // Rekurencyjnie dodaj do podkontrolek
+                }
+            }
+        }
+        private void Form_Click(object sender, EventArgs e)
+        {
+            if (sender != SawMill)
+            {
+                SawMill.Tag = Color.Transparent; // Brak obramowania po kliknięciu gdzie indziej
+                SawMill.Refresh();
+            }
+            if (sender != TownHall)
+            {
+                TownHall.Tag = Color.Transparent;
+                TownHall.Refresh();
+            }
+            if (sender != StoneMine)
+            {
+                StoneMine.Tag = Color.Transparent;
+                StoneMine.Refresh();
+            }
+            if (sender != GrainFarm)
+            {
+                GrainFarm.Tag = Color.Transparent;
+                GrainFarm.Refresh();
+            }
+            if (sender != IronMine)
+            {
+                IronMine.Tag = Color.Transparent;
+                IronMine.Refresh();
+            }
         }
         private void generateGold(object sender, EventArgs e)
         {
@@ -81,6 +122,18 @@ namespace MiniProjektApp
             GrainFarm farma = (GrainFarm)player.Villages[0].Buildings.Find(b => b.Name == "Grain Farm");
             player.Resources.Find(r => r.Name == "Wheat").Amount += farma.GenerateWheatPerTime;
             WheatAmount.Text = player.Resources.Find(r => r.Name == "Wheat").Amount.ToString();
+        }
+        private void generateStone(object sender, EventArgs e)
+        {
+            StoneMine kopalnia = (StoneMine)player.Villages[0].Buildings.Find(b => b.Name == "Stone Mine");
+            player.Resources.Find(r => r.Name == "Stone").Amount += kopalnia.GenerateStonePerTime;
+            StoneAmount.Text = player.Resources.Find(r => r.Name == "Stone").Amount.ToString();
+        }
+        private void generateIron(object sender, EventArgs e)
+        {
+            IronMine kopalnia = (IronMine)player.Villages[0].Buildings.Find(b => b.Name == "Iron Mine");
+            player.Resources.Find(r => r.Name == "Iron").Amount += kopalnia.GenerateIronPerTime;
+            IronAmount.Text = player.Resources.Find(r => r.Name == "Iron").Amount.ToString();
         }
         public void showBuildingProperties(string name)
         {
@@ -134,6 +187,8 @@ namespace MiniProjektApp
         private void TownHall_Click(object sender, EventArgs e)
         {
             showBuildingProperties("Ratusz");
+            TownHall.Tag = Color.Blue; // Zmiana koloru obramowania na niebieski
+            TownHall.Refresh();
         }
 
         private void BuildingsList_SelectedIndexChanged(object sender, EventArgs e)
@@ -178,7 +233,7 @@ namespace MiniProjektApp
                         player.AddExp(20);
                         GrainFarm.Visible = true;
                         GrainFarm farma = (GrainFarm)player.Villages[0].Buildings.Find(b => b.Name == "Grain Farm");
-                        int interval = farma.Time * 100;
+                        int interval = farma.Time * timeDelay;
                         GrainTimer = new System.Windows.Forms.Timer();
                         GrainTimer.Interval = interval;
                         GrainTimer.Enabled = true;
@@ -189,13 +244,21 @@ namespace MiniProjektApp
                         break;
                     case "Iron Mine":
                         player.Villages[0].AddBuilding(new IronMine("Iron Mine", 1));
+                        player.AddExp(25);
+                        IronMine.Visible = true;
+                        IronMine kopalniaZelaza = (IronMine)player.Villages[0].Buildings.Find(b => b.Name == "Iron Mine");
+                        interval = kopalniaZelaza.Time * timeDelay;
+                        IronTimer = new System.Windows.Forms.Timer();
+                        IronTimer.Interval = interval;
+                        IronTimer.Enabled = true;
+                        IronTimer.Tick += generateIron;
                         break;
                     case "Sawmill":
                         player.Villages[0].AddBuilding(new Sawmill("Sawmill", 1));
                         player.AddExp(10);
                         SawMill.Visible = true;
                         Sawmill tartak = (Sawmill)player.Villages[0].Buildings.Find(b => b.Name == "Sawmill");
-                        interval = tartak.Time * 100;
+                        interval = tartak.Time * timeDelay;
                         WoodTimer = new System.Windows.Forms.Timer();
                         WoodTimer.Interval = interval;
                         WoodTimer.Enabled = true;
@@ -206,6 +269,14 @@ namespace MiniProjektApp
                         break;
                     case "Stone Mine":
                         player.Villages[0].AddBuilding(new StoneMine("Stone Mine", 1));
+                        player.AddExp(15);
+                        StoneMine.Visible = true;
+                        StoneMine kopalniaKamienia = (StoneMine)player.Villages[0].Buildings.Find(b => b.Name == "Stone Mine");
+                        interval = kopalniaKamienia.Time * timeDelay;
+                        StoneTimer = new System.Windows.Forms.Timer();
+                        StoneTimer.Interval = interval;
+                        StoneTimer.Enabled = true;
+                        StoneTimer.Tick += generateStone;
                         break;
                 }
                 BuildingsList.Items.Clear();
@@ -243,11 +314,54 @@ namespace MiniProjektApp
         private void SawMill_Click(object sender, EventArgs e)
         {
             showBuildingProperties("Sawmill");
+            SawMill.Tag = Color.Blue; // Zmiana koloru obramowania na niebieski
+            SawMill.Refresh();
         }
 
         private void GrainFarm_Click(object sender, EventArgs e)
         {
             showBuildingProperties("Grain Farm");
+            GrainFarm.Tag = Color.Blue; // Zmiana koloru obramowania na niebieski
+            GrainFarm.Refresh();
         }
+
+        private void StoneMine_Click(object sender, EventArgs e)
+        {
+            showBuildingProperties("Stone Mine");
+            StoneMine.Tag = Color.Blue; // Zmiana koloru obramowania na niebieski
+            StoneMine.Refresh();
+        }
+        private void IronMine_Click(object sender, EventArgs e)
+        {
+            showBuildingProperties("Iron Mine");
+            IronMine.Tag = Color.Blue; // Zmiana koloru obramowania na niebieski
+            IronMine.Refresh();
+        }
+        private void SawMill_Paint(object sender, PaintEventArgs e)
+        {
+            if (SawMill.Tag == null) { SawMill.Tag = Color.Transparent; } // Brak obramowania jako domyślny kolor
+            ControlPaint.DrawBorder(e.Graphics, SawMill.ClientRectangle, (Color)SawMill.Tag, ButtonBorderStyle.Solid);
+        }
+        private void TownHall_Paint(object sender, PaintEventArgs e)
+        {
+            if (TownHall.Tag == null) { TownHall.Tag = Color.Transparent; } // Brak obramowania jako domyślny kolor
+            ControlPaint.DrawBorder(e.Graphics, TownHall.ClientRectangle, (Color)TownHall.Tag, ButtonBorderStyle.Solid);
+        }
+        private void StoneMine_Paint(object sender, PaintEventArgs e)
+        {
+            if (StoneMine.Tag == null) { StoneMine.Tag = Color.Transparent; } // Brak obramowania jako domyślny kolor
+            ControlPaint.DrawBorder(e.Graphics, StoneMine.ClientRectangle, (Color)StoneMine.Tag, ButtonBorderStyle.Solid);
+        }
+        private void GrainFarm_Paint(object sender, PaintEventArgs e)
+        {
+            if (GrainFarm.Tag == null) { GrainFarm.Tag = Color.Transparent; } // Brak obramowania jako domyślny kolor
+            ControlPaint.DrawBorder(e.Graphics, GrainFarm.ClientRectangle, (Color)GrainFarm.Tag, ButtonBorderStyle.Solid);
+        }
+        private void IronMine_Paint(object sender, PaintEventArgs e)
+        {
+            if (IronMine.Tag == null) { IronMine.Tag = Color.Transparent; } // Brak obramowania jako domyślny kolor
+            ControlPaint.DrawBorder(e.Graphics, IronMine.ClientRectangle, (Color)IronMine.Tag, ButtonBorderStyle.Solid);
+        }
+
     }
 }
