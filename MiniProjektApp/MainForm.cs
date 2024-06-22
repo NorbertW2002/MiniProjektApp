@@ -12,7 +12,7 @@ namespace MiniProjektApp
         private System.Windows.Forms.Timer StoneTimer;
         private System.Windows.Forms.Timer GrainTimer;
         private System.Windows.Forms.Timer WoodTimer;
-        public static int timeDelay = 100;
+        public static int timeDelay = 1;
         public MainForm()
         {
             InitializeComponent();
@@ -60,7 +60,7 @@ namespace MiniProjektApp
             Buildings.Items.Add("Silo");
             Buildings.Items.Add("Stone Mine");
             TownHall ratusz = (TownHall)player.Villages[0].Buildings.Find(b => b.Name == "Ratusz");
-            int interval = ratusz.Time * 100;
+            int interval = ratusz.Time * timeDelay;
             GoldTimer = new System.Windows.Forms.Timer();
             GoldTimer.Interval = interval;
             GoldTimer.Enabled = true;
@@ -104,36 +104,61 @@ namespace MiniProjektApp
                 IronMine.Tag = Color.Transparent;
                 IronMine.Refresh();
             }
+            if (sender != Barracks)
+            {
+                Barracks.Tag = Color.Transparent;
+                Barracks.Refresh();
+            }
         }
         private void generateGold(object sender, EventArgs e)
         {
             TownHall ratusz = (TownHall)player.Villages[0].Buildings.Find(b => b.Name == "Ratusz");
-            player.Resources.Find(r => r.Name == "Gold").Amount += ratusz.GenerateGoldPerTime;
-            GoldAmount.Text = player.Resources.Find(r => r.Name == "Gold").Amount.ToString();
+            int currentGold = player.Resources.Find(r => r.Name == "Gold").Amount;
+            if (currentGold < ratusz.MaxGoldPerTime)
+            {
+                player.Resources.Find(r => r.Name == "Gold").Amount += ratusz.GenerateGoldPerTime;
+                GoldAmount.Text = player.Resources.Find(r => r.Name == "Gold").Amount.ToString();
+            }
         }
         private void generateWood(object sender, EventArgs e)
         {
             Sawmill tartak = (Sawmill)player.Villages[0].Buildings.Find(b => b.Name == "Sawmill");
-            player.Resources.Find(r => r.Name == "Wood").Amount += tartak.GenerateWoodPerTime;
-            WoodAmount.Text = player.Resources.Find(r => r.Name == "Wood").Amount.ToString();
+            int currentWood = player.Resources.Find(r => r.Name == "Wood").Amount;
+            if (currentWood < tartak.MaxWoodPerTime)
+            {
+                player.Resources.Find(r => r.Name == "Wood").Amount += tartak.GenerateWoodPerTime;
+                WoodAmount.Text = player.Resources.Find(r => r.Name == "Wood").Amount.ToString();
+            }
         }
         private void generateWheat(object sender, EventArgs e)
         {
             GrainFarm farma = (GrainFarm)player.Villages[0].Buildings.Find(b => b.Name == "Grain Farm");
-            player.Resources.Find(r => r.Name == "Wheat").Amount += farma.GenerateWheatPerTime;
-            WheatAmount.Text = player.Resources.Find(r => r.Name == "Wheat").Amount.ToString();
+            int currentWheat = player.Resources.Find(r => r.Name == "Wheat").Amount;
+            if (currentWheat < farma.MaxFarmPerTime)
+            {
+                player.Resources.Find(r => r.Name == "Wheat").Amount += farma.GenerateWheatPerTime;
+                WheatAmount.Text = player.Resources.Find(r => r.Name == "Wheat").Amount.ToString();
+            }
         }
         private void generateStone(object sender, EventArgs e)
         {
             StoneMine kopalnia = (StoneMine)player.Villages[0].Buildings.Find(b => b.Name == "Stone Mine");
-            player.Resources.Find(r => r.Name == "Stone").Amount += kopalnia.GenerateStonePerTime;
-            StoneAmount.Text = player.Resources.Find(r => r.Name == "Stone").Amount.ToString();
+            int currentStone = player.Resources.Find(r => r.Name == "Stone").Amount;
+            if (currentStone < kopalnia.MaxStonePerTime)
+            {
+                player.Resources.Find(r => r.Name == "Stone").Amount += kopalnia.GenerateStonePerTime;
+                StoneAmount.Text = player.Resources.Find(r => r.Name == "Stone").Amount.ToString();
+            }
         }
         private void generateIron(object sender, EventArgs e)
         {
             IronMine kopalnia = (IronMine)player.Villages[0].Buildings.Find(b => b.Name == "Iron Mine");
-            player.Resources.Find(r => r.Name == "Iron").Amount += kopalnia.GenerateIronPerTime;
-            IronAmount.Text = player.Resources.Find(r => r.Name == "Iron").Amount.ToString();
+            int currentIron = player.Resources.Find(r => r.Name == "Iron").Amount;
+            if (currentIron < kopalnia.MaxIronPerTime)
+            {
+                player.Resources.Find(r => r.Name == "Iron").Amount += kopalnia.GenerateIronPerTime;
+                IronAmount.Text = player.Resources.Find(r => r.Name == "Iron").Amount.ToString();
+            }
         }
         public void showBuildingProperties(string name)
         {
@@ -224,6 +249,8 @@ namespace MiniProjektApp
                         break;
                     case "Barracks":
                         player.Villages[0].AddBuilding(new Barracks("Barracks", 1));
+                        player.AddExp(30);
+                        Barracks.Visible = true;
                         break;
                     case "Defensive Walls":
                         player.Villages[0].AddBuilding(new DefensiveWalls("Defensive Walls", 1));
@@ -337,6 +364,19 @@ namespace MiniProjektApp
             IronMine.Tag = Color.Blue; // Zmiana koloru obramowania na niebieski
             IronMine.Refresh();
         }
+
+        private void Barracks_Click(object sender, EventArgs e)
+        {
+            showBuildingProperties("Barracks");
+            Barracks.Tag = Color.Blue; // Zmiana koloru obramowania na niebieski
+            Barracks.Refresh();
+        }
+
+        private void Barracks_DoubleClick(object sender, EventArgs e)
+        {
+            var barracksform = new BarracksForm();
+            barracksform.Show();
+        }
         private void SawMill_Paint(object sender, PaintEventArgs e)
         {
             if (SawMill.Tag == null) { SawMill.Tag = Color.Transparent; } // Brak obramowania jako domyślny kolor
@@ -363,5 +403,10 @@ namespace MiniProjektApp
             ControlPaint.DrawBorder(e.Graphics, IronMine.ClientRectangle, (Color)IronMine.Tag, ButtonBorderStyle.Solid);
         }
 
+        private void Barracks_Paint(object sender, PaintEventArgs e)
+        {
+            if (Barracks.Tag == null) { Barracks.Tag = Color.Transparent; } // Brak obramowania jako domyślny kolor
+            ControlPaint.DrawBorder(e.Graphics, Barracks.ClientRectangle, (Color)Barracks.Tag, ButtonBorderStyle.Solid);
+        }
     }
 }

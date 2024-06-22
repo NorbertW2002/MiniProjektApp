@@ -178,8 +178,8 @@
   <data name="iron" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\iron.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="city_hall1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\city_hall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="map10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\map.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="wheat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\wheat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,8 +196,14 @@
   <data name="warrior" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\warrior.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="barracks" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\barracks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="map7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\map.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city_hall1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\city_hall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="map" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\map.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

@@ -73,6 +73,16 @@ namespace MiniProjektApp.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap barracks {
+            get {
+                object obj = ResourceManager.GetObject("barracks", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap catapult {
             get {
                 object obj = ResourceManager.GetObject("catapult", resourceCulture);

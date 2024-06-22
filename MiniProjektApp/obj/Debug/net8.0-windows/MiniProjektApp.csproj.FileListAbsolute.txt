@@ -21,3 +21,4 @@ C:\Users\nw862\Source\Repos\MiniProjektApp\MiniProjektApp\obj\Debug\net8.0-windo
 C:\Users\nw862\Source\Repos\MiniProjektApp\MiniProjektApp\obj\Debug\net8.0-windows\MiniProjektApp.pdb
 C:\Users\nw862\Source\Repos\MiniProjektApp\MiniProjektApp\obj\Debug\net8.0-windows\MiniProjektApp.genruntimeconfig.cache
 C:\Users\nw862\Source\Repos\MiniProjektApp\MiniProjektApp\obj\Debug\net8.0-windows\ref\MiniProjektApp.dll
+C:\Users\nw862\source\repos\MiniProjektApp\MiniProjektApp\obj\Debug\net8.0-windows\MiniProjektApp.BarracksForm.resources

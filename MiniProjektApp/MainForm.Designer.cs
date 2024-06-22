@@ -83,6 +83,7 @@
             GrainFarm = new PictureBox();
             StoneMine = new PictureBox();
             IronMine = new PictureBox();
+            Barracks = new PictureBox();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -108,6 +109,7 @@
             ((System.ComponentModel.ISupportInitialize)GrainFarm).BeginInit();
             ((System.ComponentModel.ISupportInitialize)StoneMine).BeginInit();
             ((System.ComponentModel.ISupportInitialize)IronMine).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Barracks).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -680,12 +682,27 @@
             IronMine.Visible = false;
             IronMine.Click += IronMine_Click;
             // 
+            // Barracks
+            // 
+            Barracks.BackgroundImage = Properties.Resources.map10;
+            Barracks.Image = Properties.Resources.barracks;
+            Barracks.Location = new Point(696, 237);
+            Barracks.Name = "Barracks";
+            Barracks.Size = new Size(50, 50);
+            Barracks.TabIndex = 20;
+            Barracks.TabStop = false;
+            Barracks.Visible = false;
+            Barracks.Click += Barracks_Click;
+            Barracks.Paint += Barracks_Paint;
+            Barracks.DoubleClick += Barracks_DoubleClick;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Snow;
             ClientSize = new Size(1115, 834);
+            Controls.Add(Barracks);
             Controls.Add(IronMine);
             Controls.Add(StoneMine);
             Controls.Add(GrainFarm);
@@ -733,6 +750,7 @@
             ((System.ComponentModel.ISupportInitialize)GrainFarm).EndInit();
             ((System.ComponentModel.ISupportInitialize)StoneMine).EndInit();
             ((System.ComponentModel.ISupportInitialize)IronMine).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Barracks).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -793,5 +811,6 @@
         private PictureBox GrainFarm;
         private PictureBox StoneMine;
         private PictureBox IronMine;
+        private PictureBox Barracks;
     }
 }
