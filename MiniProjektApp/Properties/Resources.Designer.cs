@@ -73,6 +73,16 @@ namespace MiniProjektApp.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap archer1 {
+            get {
+                object obj = ResourceManager.GetObject("archer1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap armory {
             get {
                 object obj = ResourceManager.GetObject("armory", resourceCulture);
@@ -156,6 +166,16 @@ namespace MiniProjektApp.Properties {
         internal static System.Drawing.Bitmap grainfarm1 {
             get {
                 object obj = ResourceManager.GetObject("grainfarm1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap horses {
+            get {
+                object obj = ResourceManager.GetObject("horses", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -316,6 +336,16 @@ namespace MiniProjektApp.Properties {
         internal static System.Drawing.Bitmap sawmill {
             get {
                 object obj = ResourceManager.GetObject("sawmill", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap silo {
+            get {
+                object obj = ResourceManager.GetObject("silo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

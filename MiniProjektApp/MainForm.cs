@@ -272,6 +272,8 @@ namespace MiniProjektApp
                         break;
                     case "Horse Stable":
                         player.Villages[0].AddBuilding(new HorseStable("Horse Stable", 1));
+                        player.AddExp(25);
+                        horses.Visible = true;
                         break;
                     case "Iron Mine":
                         player.Villages[0].AddBuilding(new IronMine("Iron Mine", 1));
@@ -297,6 +299,8 @@ namespace MiniProjektApp
                         break;
                     case "Silo":
                         player.Villages[0].AddBuilding(new Silo("Silo", 1));
+                        player.AddExp(30);
+                        silo.Visible = true;
                         break;
                     case "Stone Mine":
                         player.Villages[0].AddBuilding(new StoneMine("Stone Mine", 1));
@@ -340,6 +344,15 @@ namespace MiniProjektApp
             {
                 ResourcesForBuilding.Items.Add(resource.ToString());
             }
+
+            ResourcesForUpgrade.Items.Clear();
+            string upgradeItem = Buildings.SelectedItem?.ToString();
+            List<Resource> resources1 = resourcesNeeded.ResourceForUpgrade(upgradeItem, 1);
+            foreach (Resource resource in resources1)
+            {
+                ResourcesForUpgrade.Items.Add(resource.ToString());
+            }
+
         }
 
         private void SawMill_Click(object sender, EventArgs e)
@@ -419,6 +432,16 @@ namespace MiniProjektApp
         }
 
         private void pictureBox13_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpgradeButton_Click(object sender, EventArgs e)
         {
 
         }

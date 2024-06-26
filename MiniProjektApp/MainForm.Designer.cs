@@ -52,7 +52,7 @@
             PlayerLevel = new Label();
             label1 = new Label();
             PlayerName = new Label();
-            Walls = new PictureBox();
+            map = new PictureBox();
             TownHall = new PictureBox();
             Villages = new GroupBox();
             pictureBox12 = new PictureBox();
@@ -71,7 +71,8 @@
             label2 = new Label();
             BuildingsList = new ListBox();
             groupBox3 = new GroupBox();
-            button2 = new Button();
+            ResourcesForUpgrade = new ListBox();
+            UpgradeButton = new Button();
             label3 = new Label();
             BuildingProperty = new ListBox();
             groupBox4 = new GroupBox();
@@ -85,7 +86,9 @@
             IronMine = new PictureBox();
             Barracks = new PictureBox();
             Armories = new PictureBox();
-            pictureBox13 = new PictureBox();
+            Walls = new PictureBox();
+            horses = new PictureBox();
+            silo = new PictureBox();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -95,7 +98,7 @@
             groupBox1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)Walls).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)map).BeginInit();
             ((System.ComponentModel.ISupportInitialize)TownHall).BeginInit();
             Villages.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
@@ -113,7 +116,9 @@
             ((System.ComponentModel.ISupportInitialize)IronMine).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Barracks).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Armories).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Walls).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)horses).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)silo).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -355,15 +360,14 @@
             PlayerName.Text = "Nazwa gracza";
             PlayerName.Click += label2_Click;
             // 
-            // Walls
+            // map
             // 
-            Walls.Image = Properties.Resources.map6;
-            Walls.Location = new Point(223, 125);
-            Walls.Name = "Walls";
-            Walls.Size = new Size(660, 400);
-            Walls.TabIndex = 10;
-            Walls.TabStop = false;
-            Walls.Visible = false;
+            map.Image = Properties.Resources.map6;
+            map.Location = new Point(223, 125);
+            map.Name = "map";
+            map.Size = new Size(660, 400);
+            map.TabIndex = 10;
+            map.TabStop = false;
             // 
             // TownHall
             // 
@@ -543,26 +547,36 @@
             // groupBox3
             // 
             groupBox3.BackColor = Color.SaddleBrown;
-            groupBox3.Controls.Add(button2);
+            groupBox3.Controls.Add(ResourcesForUpgrade);
+            groupBox3.Controls.Add(UpgradeButton);
             groupBox3.Controls.Add(label3);
             groupBox3.Controls.Add(BuildingProperty);
             groupBox3.ForeColor = Color.Gold;
             groupBox3.Location = new Point(889, 125);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(214, 400);
+            groupBox3.Size = new Size(223, 400);
             groupBox3.TabIndex = 13;
             groupBox3.TabStop = false;
             groupBox3.Text = "Własności";
             // 
-            // button2
+            // ResourcesForUpgrade
             // 
-            button2.ForeColor = Color.Black;
-            button2.Location = new Point(6, 244);
-            button2.Name = "button2";
-            button2.Size = new Size(197, 29);
-            button2.TabIndex = 15;
-            button2.Text = "Ulepsz!";
-            button2.UseVisualStyleBackColor = true;
+            ResourcesForUpgrade.FormattingEnabled = true;
+            ResourcesForUpgrade.Location = new Point(6, 290);
+            ResourcesForUpgrade.Name = "ResourcesForUpgrade";
+            ResourcesForUpgrade.Size = new Size(208, 104);
+            ResourcesForUpgrade.TabIndex = 1;
+            // 
+            // UpgradeButton
+            // 
+            UpgradeButton.ForeColor = Color.Black;
+            UpgradeButton.Location = new Point(6, 244);
+            UpgradeButton.Name = "UpgradeButton";
+            UpgradeButton.Size = new Size(208, 29);
+            UpgradeButton.TabIndex = 15;
+            UpgradeButton.Text = "Ulepsz!";
+            UpgradeButton.UseVisualStyleBackColor = true;
+            UpgradeButton.Click += UpgradeButton_Click;
             // 
             // label3
             // 
@@ -580,7 +594,7 @@
             BuildingProperty.FormattingEnabled = true;
             BuildingProperty.Location = new Point(6, 45);
             BuildingProperty.Name = "BuildingProperty";
-            BuildingProperty.Size = new Size(197, 184);
+            BuildingProperty.Size = new Size(208, 184);
             BuildingProperty.TabIndex = 13;
             // 
             // groupBox4
@@ -640,7 +654,7 @@
             // 
             SawMill.BackgroundImage = Properties.Resources.map6;
             SawMill.Image = Properties.Resources.sawmill;
-            SawMill.Location = new Point(634, 348);
+            SawMill.Location = new Point(672, 348);
             SawMill.Name = "SawMill";
             SawMill.Size = new Size(50, 50);
             SawMill.TabIndex = 16;
@@ -653,7 +667,7 @@
             // 
             GrainFarm.BackgroundImage = Properties.Resources.map8;
             GrainFarm.Image = Properties.Resources.grainfarm1;
-            GrainFarm.Location = new Point(766, 399);
+            GrainFarm.Location = new Point(766, 424);
             GrainFarm.Name = "GrainFarm";
             GrainFarm.Size = new Size(50, 50);
             GrainFarm.TabIndex = 17;
@@ -666,7 +680,7 @@
             // 
             StoneMine.BackgroundImage = Properties.Resources.map9;
             StoneMine.Image = Properties.Resources.stonemine;
-            StoneMine.Location = new Point(560, 399);
+            StoneMine.Location = new Point(544, 424);
             StoneMine.Name = "StoneMine";
             StoneMine.Size = new Size(50, 50);
             StoneMine.TabIndex = 18;
@@ -679,7 +693,7 @@
             // 
             IronMine.BackgroundImage = Properties.Resources.map10;
             IronMine.Image = Properties.Resources.ironmine;
-            IronMine.Location = new Point(339, 267);
+            IronMine.Location = new Point(339, 283);
             IronMine.Name = "IronMine";
             IronMine.Size = new Size(50, 50);
             IronMine.TabIndex = 19;
@@ -691,7 +705,7 @@
             // 
             Barracks.BackgroundImage = Properties.Resources.map10;
             Barracks.Image = Properties.Resources.barracks;
-            Barracks.Location = new Point(696, 237);
+            Barracks.Location = new Point(766, 283);
             Barracks.Name = "Barracks";
             Barracks.Size = new Size(50, 50);
             Barracks.TabIndex = 20;
@@ -705,7 +719,7 @@
             // 
             Armories.BackgroundImage = Properties.Resources.map10;
             Armories.Image = Properties.Resources.armory;
-            Armories.Location = new Point(339, 387);
+            Armories.Location = new Point(339, 424);
             Armories.Name = "Armories";
             Armories.Size = new Size(50, 50);
             Armories.TabIndex = 21;
@@ -713,18 +727,41 @@
             Armories.Visible = false;
             Armories.Click += pictureBox13_Click;
             // 
-            // pictureBox13
+            // Walls
             // 
-            pictureBox13.BackgroundImage = Properties.Resources.map10;
-            pictureBox13.Image = Properties.Resources.wall;
-            pictureBox13.InitialImage = Properties.Resources.wall;
-            pictureBox13.Location = new Point(528, 147);
-            pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(100, 48);
-            pictureBox13.TabIndex = 22;
-            pictureBox13.TabStop = false;
-            pictureBox13.Visible = false;
-            pictureBox13.Click += pictureBox13_Click_1;
+            Walls.BackgroundImage = Properties.Resources.map10;
+            Walls.Image = Properties.Resources.wall;
+            Walls.InitialImage = Properties.Resources.wall;
+            Walls.Location = new Point(528, 147);
+            Walls.Name = "Walls";
+            Walls.Size = new Size(100, 48);
+            Walls.TabIndex = 22;
+            Walls.TabStop = false;
+            Walls.Visible = false;
+            Walls.Click += pictureBox13_Click_1;
+            // 
+            // horses
+            // 
+            horses.BackgroundImage = Properties.Resources.map10;
+            horses.Image = Properties.Resources.horses;
+            horses.Location = new Point(447, 348);
+            horses.Name = "horses";
+            horses.Size = new Size(50, 50);
+            horses.TabIndex = 23;
+            horses.TabStop = false;
+            horses.Visible = false;
+            // 
+            // silo
+            // 
+            silo.BackgroundImage = Properties.Resources.map10;
+            silo.Image = Properties.Resources.silo;
+            silo.Location = new Point(246, 348);
+            silo.Name = "silo";
+            silo.Size = new Size(50, 50);
+            silo.TabIndex = 24;
+            silo.TabStop = false;
+            silo.Visible = false;
+            silo.Click += pictureBox6_Click;
             // 
             // MainForm
             // 
@@ -732,7 +769,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Snow;
             ClientSize = new Size(1115, 834);
-            Controls.Add(pictureBox13);
+            Controls.Add(silo);
+            Controls.Add(horses);
+            Controls.Add(Walls);
             Controls.Add(Armories);
             Controls.Add(Barracks);
             Controls.Add(IronMine);
@@ -744,7 +783,7 @@
             Controls.Add(groupBox3);
             Controls.Add(Villages);
             Controls.Add(TownHall);
-            Controls.Add(Walls);
+            Controls.Add(map);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
@@ -764,7 +803,7 @@
             flowLayoutPanel1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)Walls).EndInit();
+            ((System.ComponentModel.ISupportInitialize)map).EndInit();
             ((System.ComponentModel.ISupportInitialize)TownHall).EndInit();
             Villages.ResumeLayout(false);
             Villages.PerformLayout();
@@ -784,7 +823,9 @@
             ((System.ComponentModel.ISupportInitialize)IronMine).EndInit();
             ((System.ComponentModel.ISupportInitialize)Barracks).EndInit();
             ((System.ComponentModel.ISupportInitialize)Armories).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Walls).EndInit();
+            ((System.ComponentModel.ISupportInitialize)horses).EndInit();
+            ((System.ComponentModel.ISupportInitialize)silo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -848,5 +889,12 @@
         private PictureBox Barracks;
         private PictureBox Armories;
         private PictureBox pictureBox13;
+        private PictureBox horses;
+        private PictureBox silo;
+        private PictureBox map;
+        private Button UpgradeButtonClick;
+        private Button UpgradeButton;
+        private ListBox listBox1;
+        private ListBox ResourcesForUpgrade;
     }
 }
