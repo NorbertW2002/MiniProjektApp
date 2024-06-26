@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,6 +9,19 @@ namespace MiniProjekt
 {
     public class TownHall:Building
     {
+        private int level = 1;
+        public override int Level
+        {
+            get => level;
+            set
+            {
+                if (value <= MaxBuildingLevel)
+                {
+                    level = value;
+                    UpdateProperties();
+                }
+            }
+        }
         public int MaxBuildingLevel { get; set; }
 
         public int GenerateGoldPerTime { get; set; }
@@ -21,20 +35,31 @@ namespace MiniProjekt
             this.MaxBuildingLevel = MaxBuildingLevel;
             this.GenerateGoldPerTime = GenerateGoldPerTime;
             this.MaxGoldPerTime = MaxGoldPerTime;
+            Time = 20;
+            UpdateProperties();
         }
         public TownHall(string Name, int Level): base(Name, Level)
         {
-            this.MaxBuildingLevel = 10;
-            this.GenerateGoldPerTime = 10;
-            this.MaxGoldPerTime = 1000;
-            this.Time = 20;
+            MaxBuildingLevel = 8;
+            GenerateGoldPerTime = 10;
+            MaxGoldPerTime = 1000;
+            Time = 20;
+            UpdateProperties();
         }
 
         public TownHall() : base()
         {
-            this.MaxBuildingLevel = 10;
-            this.GenerateGoldPerTime = 10;
-            this.MaxGoldPerTime = 1000;
+            MaxBuildingLevel = 8;
+            GenerateGoldPerTime = 10;
+            MaxGoldPerTime = 1000;
+            Time = 20;
+            UpdateProperties();
+        }
+        private void UpdateProperties()
+        {
+            GenerateGoldPerTime = 10 + (Level-1) * 5;
+            MaxGoldPerTime = 1000 + (Level-1) * (100 * Level);
+            Time = 20 - (Level - 1) * 2;
         }
 
         public override string ToString()

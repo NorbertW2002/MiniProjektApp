@@ -46,3 +46,5 @@ C:\Users\Asus\Source\Repos\MiniProjektApp\MiniProjektApp\obj\Debug\net8.0-window
 C:\Users\Asus\Source\Repos\MiniProjektApp\MiniProjektApp\obj\Debug\net8.0-windows\MiniProjektApp.pdb
 C:\Users\Asus\Source\Repos\MiniProjektApp\MiniProjektApp\obj\Debug\net8.0-windows\MiniProjektApp.genruntimeconfig.cache
 C:\Users\Asus\Source\Repos\MiniProjektApp\MiniProjektApp\obj\Debug\net8.0-windows\ref\MiniProjektApp.dll
+C:\Users\nw862\Source\Repos\MiniProjektApp\MiniProjektApp\obj\Debug\net8.0-windows\MiniProjektApp.NotificationForm.resources
+C:\Users\nw862\Source\Repos\MiniProjektApp\MiniProjektApp\obj\Debug\net8.0-windows\MiniProjektApp.ArmoryForm.resources

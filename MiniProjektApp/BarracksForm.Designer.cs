@@ -34,18 +34,6 @@
             Kamikadze = new PictureBox();
             Trojan = new PictureBox();
             Warrior = new PictureBox();
-            ArchersAmount = new TextBox();
-            CatapultsAmount = new TextBox();
-            HussarsAmount = new TextBox();
-            KamikadzeAmount = new TextBox();
-            TrojanAmount = new TextBox();
-            textBox5 = new TextBox();
-            ArcherIncrease = new Button();
-            CatapultIncrease = new Button();
-            HussarIncrease = new Button();
-            KamikadzeIncrease = new Button();
-            TrojanIncrease = new Button();
-            WarriorIncrease = new Button();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -58,11 +46,17 @@
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             groupBox1 = new GroupBox();
-            pictureBox4 = new PictureBox();
-            GoldRequired = new Label();
-            WheatRequired = new Label();
-            StoneRequired = new Label();
             IronRequired = new Label();
+            StoneRequired = new Label();
+            WheatRequired = new Label();
+            GoldRequired = new Label();
+            pictureBox4 = new PictureBox();
+            ArchersAmount = new NumericUpDown();
+            CatapultAmount = new NumericUpDown();
+            HussarAmount = new NumericUpDown();
+            KamikadzeAmount = new NumericUpDown();
+            TrojanAmount = new NumericUpDown();
+            WarriorAmount = new NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)Archers).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Catapults).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Hussars).BeginInit();
@@ -74,6 +68,12 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ArchersAmount).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)CatapultAmount).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)HussarAmount).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)KamikadzeAmount).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)TrojanAmount).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)WarriorAmount).BeginInit();
             SuspendLayout();
             // 
             // Archers
@@ -135,126 +135,6 @@
             Warrior.Size = new Size(32, 32);
             Warrior.TabIndex = 5;
             Warrior.TabStop = false;
-            // 
-            // ArchersAmount
-            // 
-            ArchersAmount.BackColor = Color.SandyBrown;
-            ArchersAmount.ForeColor = Color.FloralWhite;
-            ArchersAmount.Location = new Point(222, 28);
-            ArchersAmount.Name = "ArchersAmount";
-            ArchersAmount.Size = new Size(51, 27);
-            ArchersAmount.TabIndex = 6;
-            ArchersAmount.Text = "0";
-            // 
-            // CatapultsAmount
-            // 
-            CatapultsAmount.BackColor = Color.SandyBrown;
-            CatapultsAmount.ForeColor = Color.FloralWhite;
-            CatapultsAmount.Location = new Point(222, 78);
-            CatapultsAmount.Name = "CatapultsAmount";
-            CatapultsAmount.Size = new Size(51, 27);
-            CatapultsAmount.TabIndex = 7;
-            CatapultsAmount.Text = "0";
-            // 
-            // HussarsAmount
-            // 
-            HussarsAmount.BackColor = Color.SandyBrown;
-            HussarsAmount.ForeColor = Color.FloralWhite;
-            HussarsAmount.Location = new Point(222, 130);
-            HussarsAmount.Name = "HussarsAmount";
-            HussarsAmount.Size = new Size(51, 27);
-            HussarsAmount.TabIndex = 8;
-            HussarsAmount.Text = "0";
-            // 
-            // KamikadzeAmount
-            // 
-            KamikadzeAmount.BackColor = Color.SandyBrown;
-            KamikadzeAmount.ForeColor = Color.FloralWhite;
-            KamikadzeAmount.Location = new Point(222, 186);
-            KamikadzeAmount.Name = "KamikadzeAmount";
-            KamikadzeAmount.Size = new Size(51, 27);
-            KamikadzeAmount.TabIndex = 9;
-            KamikadzeAmount.Text = "0";
-            // 
-            // TrojanAmount
-            // 
-            TrojanAmount.BackColor = Color.SandyBrown;
-            TrojanAmount.ForeColor = Color.FloralWhite;
-            TrojanAmount.Location = new Point(222, 241);
-            TrojanAmount.Name = "TrojanAmount";
-            TrojanAmount.Size = new Size(51, 27);
-            TrojanAmount.TabIndex = 10;
-            TrojanAmount.Text = "0";
-            // 
-            // textBox5
-            // 
-            textBox5.BackColor = Color.SandyBrown;
-            textBox5.ForeColor = Color.FloralWhite;
-            textBox5.Location = new Point(222, 305);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(51, 27);
-            textBox5.TabIndex = 11;
-            textBox5.Text = "0";
-            // 
-            // ArcherIncrease
-            // 
-            ArcherIncrease.ForeColor = Color.FromArgb(64, 0, 64);
-            ArcherIncrease.Location = new Point(291, 28);
-            ArcherIncrease.Name = "ArcherIncrease";
-            ArcherIncrease.Size = new Size(27, 27);
-            ArcherIncrease.TabIndex = 12;
-            ArcherIncrease.Text = "+";
-            ArcherIncrease.UseVisualStyleBackColor = true;
-            // 
-            // CatapultIncrease
-            // 
-            CatapultIncrease.ForeColor = Color.FromArgb(64, 0, 64);
-            CatapultIncrease.Location = new Point(291, 78);
-            CatapultIncrease.Name = "CatapultIncrease";
-            CatapultIncrease.Size = new Size(27, 27);
-            CatapultIncrease.TabIndex = 13;
-            CatapultIncrease.Text = "+";
-            CatapultIncrease.UseVisualStyleBackColor = true;
-            // 
-            // HussarIncrease
-            // 
-            HussarIncrease.ForeColor = Color.FromArgb(64, 0, 64);
-            HussarIncrease.Location = new Point(291, 130);
-            HussarIncrease.Name = "HussarIncrease";
-            HussarIncrease.Size = new Size(27, 27);
-            HussarIncrease.TabIndex = 14;
-            HussarIncrease.Text = "+";
-            HussarIncrease.UseVisualStyleBackColor = true;
-            // 
-            // KamikadzeIncrease
-            // 
-            KamikadzeIncrease.ForeColor = Color.FromArgb(64, 0, 64);
-            KamikadzeIncrease.Location = new Point(291, 186);
-            KamikadzeIncrease.Name = "KamikadzeIncrease";
-            KamikadzeIncrease.Size = new Size(27, 27);
-            KamikadzeIncrease.TabIndex = 15;
-            KamikadzeIncrease.Text = "+";
-            KamikadzeIncrease.UseVisualStyleBackColor = true;
-            // 
-            // TrojanIncrease
-            // 
-            TrojanIncrease.ForeColor = Color.FromArgb(64, 0, 64);
-            TrojanIncrease.Location = new Point(291, 246);
-            TrojanIncrease.Name = "TrojanIncrease";
-            TrojanIncrease.Size = new Size(27, 27);
-            TrojanIncrease.TabIndex = 16;
-            TrojanIncrease.Text = "+";
-            TrojanIncrease.UseVisualStyleBackColor = true;
-            // 
-            // WarriorIncrease
-            // 
-            WarriorIncrease.ForeColor = Color.FromArgb(64, 0, 64);
-            WarriorIncrease.Location = new Point(291, 305);
-            WarriorIncrease.Name = "WarriorIncrease";
-            WarriorIncrease.Size = new Size(27, 27);
-            WarriorIncrease.TabIndex = 17;
-            WarriorIncrease.Text = "+";
-            WarriorIncrease.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -331,6 +211,7 @@
             RecruitButton.TabIndex = 24;
             RecruitButton.Text = "Rekrutuj!";
             RecruitButton.UseVisualStyleBackColor = true;
+            RecruitButton.Click += RecruitButton_Click;
             // 
             // label7
             // 
@@ -388,34 +269,15 @@
             groupBox1.TabIndex = 29;
             groupBox1.TabStop = false;
             // 
-            // pictureBox4
+            // IronRequired
             // 
-            pictureBox4.Image = Properties.Resources.iron;
-            pictureBox4.Location = new Point(6, 168);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(32, 32);
-            pictureBox4.TabIndex = 29;
-            pictureBox4.TabStop = false;
-            // 
-            // GoldRequired
-            // 
-            GoldRequired.AutoSize = true;
-            GoldRequired.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            GoldRequired.Location = new Point(66, 23);
-            GoldRequired.Name = "GoldRequired";
-            GoldRequired.Size = new Size(24, 28);
-            GoldRequired.TabIndex = 30;
-            GoldRequired.Text = "0";
-            // 
-            // WheatRequired
-            // 
-            WheatRequired.AutoSize = true;
-            WheatRequired.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            WheatRequired.Location = new Point(66, 71);
-            WheatRequired.Name = "WheatRequired";
-            WheatRequired.Size = new Size(24, 28);
-            WheatRequired.TabIndex = 31;
-            WheatRequired.Text = "0";
+            IronRequired.AutoSize = true;
+            IronRequired.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            IronRequired.Location = new Point(66, 168);
+            IronRequired.Name = "IronRequired";
+            IronRequired.Size = new Size(24, 28);
+            IronRequired.TabIndex = 33;
+            IronRequired.Text = "0";
             // 
             // StoneRequired
             // 
@@ -427,15 +289,94 @@
             StoneRequired.TabIndex = 32;
             StoneRequired.Text = "0";
             // 
-            // IronRequired
+            // WheatRequired
             // 
-            IronRequired.AutoSize = true;
-            IronRequired.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            IronRequired.Location = new Point(66, 168);
-            IronRequired.Name = "IronRequired";
-            IronRequired.Size = new Size(24, 28);
-            IronRequired.TabIndex = 33;
-            IronRequired.Text = "0";
+            WheatRequired.AutoSize = true;
+            WheatRequired.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            WheatRequired.Location = new Point(66, 71);
+            WheatRequired.Name = "WheatRequired";
+            WheatRequired.Size = new Size(24, 28);
+            WheatRequired.TabIndex = 31;
+            WheatRequired.Text = "0";
+            // 
+            // GoldRequired
+            // 
+            GoldRequired.AutoSize = true;
+            GoldRequired.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            GoldRequired.Location = new Point(66, 23);
+            GoldRequired.Name = "GoldRequired";
+            GoldRequired.Size = new Size(24, 28);
+            GoldRequired.TabIndex = 30;
+            GoldRequired.Text = "0";
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = Properties.Resources.iron;
+            pictureBox4.Location = new Point(6, 168);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(32, 32);
+            pictureBox4.TabIndex = 29;
+            pictureBox4.TabStop = false;
+            // 
+            // ArchersAmount
+            // 
+            ArchersAmount.BackColor = Color.SandyBrown;
+            ArchersAmount.ForeColor = Color.FloralWhite;
+            ArchersAmount.Location = new Point(201, 23);
+            ArchersAmount.Name = "ArchersAmount";
+            ArchersAmount.Size = new Size(113, 27);
+            ArchersAmount.TabIndex = 30;
+            ArchersAmount.ValueChanged += ArchersAmount_ValueChanged;
+            // 
+            // CatapultAmount
+            // 
+            CatapultAmount.BackColor = Color.SandyBrown;
+            CatapultAmount.ForeColor = Color.FloralWhite;
+            CatapultAmount.Location = new Point(201, 74);
+            CatapultAmount.Name = "CatapultAmount";
+            CatapultAmount.Size = new Size(113, 27);
+            CatapultAmount.TabIndex = 31;
+            CatapultAmount.ValueChanged += CatapultAmount_ValueChanged;
+            // 
+            // HussarAmount
+            // 
+            HussarAmount.BackColor = Color.SandyBrown;
+            HussarAmount.ForeColor = Color.FloralWhite;
+            HussarAmount.Location = new Point(201, 130);
+            HussarAmount.Name = "HussarAmount";
+            HussarAmount.Size = new Size(113, 27);
+            HussarAmount.TabIndex = 32;
+            HussarAmount.ValueChanged += HussarAmount_ValueChanged;
+            // 
+            // KamikadzeAmount
+            // 
+            KamikadzeAmount.BackColor = Color.SandyBrown;
+            KamikadzeAmount.ForeColor = Color.FloralWhite;
+            KamikadzeAmount.Location = new Point(201, 186);
+            KamikadzeAmount.Name = "KamikadzeAmount";
+            KamikadzeAmount.Size = new Size(113, 27);
+            KamikadzeAmount.TabIndex = 33;
+            KamikadzeAmount.ValueChanged += KamikadzeAmount_ValueChanged;
+            // 
+            // TrojanAmount
+            // 
+            TrojanAmount.BackColor = Color.SandyBrown;
+            TrojanAmount.ForeColor = Color.FloralWhite;
+            TrojanAmount.Location = new Point(201, 236);
+            TrojanAmount.Name = "TrojanAmount";
+            TrojanAmount.Size = new Size(113, 27);
+            TrojanAmount.TabIndex = 34;
+            TrojanAmount.ValueChanged += TrojanAmount_ValueChanged;
+            // 
+            // WarriorAmount
+            // 
+            WarriorAmount.BackColor = Color.SandyBrown;
+            WarriorAmount.ForeColor = Color.FloralWhite;
+            WarriorAmount.Location = new Point(201, 300);
+            WarriorAmount.Name = "WarriorAmount";
+            WarriorAmount.Size = new Size(113, 27);
+            WarriorAmount.TabIndex = 35;
+            WarriorAmount.ValueChanged += WarriorAmount_ValueChanged;
             // 
             // BarracksForm
             // 
@@ -443,6 +384,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SaddleBrown;
             ClientSize = new Size(592, 434);
+            Controls.Add(WarriorAmount);
+            Controls.Add(TrojanAmount);
+            Controls.Add(KamikadzeAmount);
+            Controls.Add(HussarAmount);
+            Controls.Add(CatapultAmount);
+            Controls.Add(ArchersAmount);
             Controls.Add(groupBox1);
             Controls.Add(label7);
             Controls.Add(RecruitButton);
@@ -452,18 +399,6 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(WarriorIncrease);
-            Controls.Add(TrojanIncrease);
-            Controls.Add(KamikadzeIncrease);
-            Controls.Add(HussarIncrease);
-            Controls.Add(CatapultIncrease);
-            Controls.Add(ArcherIncrease);
-            Controls.Add(textBox5);
-            Controls.Add(TrojanAmount);
-            Controls.Add(KamikadzeAmount);
-            Controls.Add(HussarsAmount);
-            Controls.Add(CatapultsAmount);
-            Controls.Add(ArchersAmount);
             Controls.Add(Warrior);
             Controls.Add(Trojan);
             Controls.Add(Kamikadze);
@@ -473,6 +408,7 @@
             ForeColor = Color.FloralWhite;
             Name = "BarracksForm";
             Text = "Rekrutacja";
+            Load += BarracksForm_Load;
             ((System.ComponentModel.ISupportInitialize)Archers).EndInit();
             ((System.ComponentModel.ISupportInitialize)Catapults).EndInit();
             ((System.ComponentModel.ISupportInitialize)Hussars).EndInit();
@@ -485,6 +421,12 @@
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ArchersAmount).EndInit();
+            ((System.ComponentModel.ISupportInitialize)CatapultAmount).EndInit();
+            ((System.ComponentModel.ISupportInitialize)HussarAmount).EndInit();
+            ((System.ComponentModel.ISupportInitialize)KamikadzeAmount).EndInit();
+            ((System.ComponentModel.ISupportInitialize)TrojanAmount).EndInit();
+            ((System.ComponentModel.ISupportInitialize)WarriorAmount).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -497,18 +439,7 @@
         private PictureBox Kamikadze;
         private PictureBox Trojan;
         private PictureBox Warrior;
-        private TextBox ArchersAmount;
-        private TextBox CatapultsAmount;
-        private TextBox HussarsAmount;
-        private TextBox KamikadzeAmount;
-        private TextBox TrojanAmount;
         private TextBox textBox5;
-        private Button ArcherIncrease;
-        private Button CatapultIncrease;
-        private Button HussarIncrease;
-        private Button KamikadzeIncrease;
-        private Button TrojanIncrease;
-        private Button WarriorIncrease;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -526,5 +457,11 @@
         private Label IronRequired;
         private Label StoneRequired;
         private Label WheatRequired;
+        private NumericUpDown ArchersAmount;
+        private NumericUpDown CatapultAmount;
+        private NumericUpDown HussarAmount;
+        private NumericUpDown KamikadzeAmount;
+        private NumericUpDown TrojanAmount;
+        private NumericUpDown WarriorAmount;
     }
 }

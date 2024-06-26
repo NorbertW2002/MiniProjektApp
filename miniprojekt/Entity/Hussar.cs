@@ -9,7 +9,29 @@ namespace MiniProjekt
 {
     public class Hussar: Entity
     {
-        public Hussar(int level, int currentHp, int maxHp, double attackSpeed, Damage damageType, int damage, int physicalResistance, int rangeResistance) : base(1, 20, 20, 2, Enumarable.Damage.Physical, 20, 6, 1)
+        private int level = 1;
+        public override int Level
+        {
+            get => level;
+            set
+            {
+                if (value < 5)
+                {
+                    level = value;
+                    UpdateProperties();
+                }
+            }
+        }
+        private void UpdateProperties()
+        {
+            MaxHP = (int)(MaxHP * 1.15);
+            CurrentHP = MaxHP;
+            AttackSpeed = (int)(AttackSpeed * 1.3);
+            Damage = (int)(Damage * 1.2);
+            PhysicalResistance = (int)(PhysicalResistance * 1.25);
+            RangeResistance = (int)(RangeResistance * 1.25);
+        }
+        public Hussar() : base(1, "Hussar", 20, 20, 2, Enumarable.Damage.Physical, 20, 6, 1)
         {
         }
     }

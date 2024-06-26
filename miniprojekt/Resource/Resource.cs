@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace MiniProjekt
@@ -10,8 +11,8 @@ namespace MiniProjekt
     {
         public string Name { get; set; }
         public int Amount {  get; set; }
-
-        public Resource(string name, int amount)
+        [JsonConstructor]
+        protected Resource(string name, int amount)
         {
             Name = name;
             Amount = amount;

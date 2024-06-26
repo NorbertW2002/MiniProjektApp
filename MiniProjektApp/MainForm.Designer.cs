@@ -30,6 +30,8 @@
         {
             menuStrip1 = new MenuStrip();
             plemięToolStripMenuItem = new ToolStripMenuItem();
+            wczytajGraczaToolStripMenuItem = new ToolStripMenuItem();
+            zapiszGraczaToolStripMenuItem = new ToolStripMenuItem();
             frakcjeToolStripMenuItem = new ToolStripMenuItem();
             ekspedycjeToolStripMenuItem = new ToolStripMenuItem();
             graczeToolStripMenuItem = new ToolStripMenuItem();
@@ -55,6 +57,13 @@
             map = new PictureBox();
             TownHall = new PictureBox();
             Villages = new GroupBox();
+            label11 = new Label();
+            label10 = new Label();
+            label9 = new Label();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            ArcherAmount = new Label();
             pictureBox12 = new PictureBox();
             pictureBox11 = new PictureBox();
             pictureBox10 = new PictureBox();
@@ -66,7 +75,6 @@
             KamikadzeAmount = new Label();
             HussarAmount = new Label();
             CatapultAmount = new Label();
-            ArcherAmount = new Label();
             label5 = new Label();
             label2 = new Label();
             BuildingsList = new ListBox();
@@ -133,9 +141,24 @@
             // 
             // plemięToolStripMenuItem
             // 
+            plemięToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { wczytajGraczaToolStripMenuItem, zapiszGraczaToolStripMenuItem });
             plemięToolStripMenuItem.Name = "plemięToolStripMenuItem";
             plemięToolStripMenuItem.Size = new Size(68, 24);
             plemięToolStripMenuItem.Text = "Plemię";
+            // 
+            // wczytajGraczaToolStripMenuItem
+            // 
+            wczytajGraczaToolStripMenuItem.Name = "wczytajGraczaToolStripMenuItem";
+            wczytajGraczaToolStripMenuItem.Size = new Size(224, 26);
+            wczytajGraczaToolStripMenuItem.Text = "Wczytaj gracza";
+            wczytajGraczaToolStripMenuItem.Click += wczytajGraczaToolStripMenuItem_Click;
+            // 
+            // zapiszGraczaToolStripMenuItem
+            // 
+            zapiszGraczaToolStripMenuItem.Name = "zapiszGraczaToolStripMenuItem";
+            zapiszGraczaToolStripMenuItem.Size = new Size(224, 26);
+            zapiszGraczaToolStripMenuItem.Text = "Zapisz gracza";
+            zapiszGraczaToolStripMenuItem.Click += zapiszGraczaToolStripMenuItem_Click;
             // 
             // frakcjeToolStripMenuItem
             // 
@@ -190,7 +213,6 @@
             pictureBox1.Size = new Size(32, 32);
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // pictureBox2
             // 
@@ -231,7 +253,6 @@
             GoldAmount.Size = new Size(18, 20);
             GoldAmount.TabIndex = 13;
             GoldAmount.Text = "0";
-            GoldAmount.Click += GoldAmount_Click;
             // 
             // WheatAmount
             // 
@@ -358,7 +379,6 @@
             PlayerName.Size = new Size(144, 28);
             PlayerName.TabIndex = 10;
             PlayerName.Text = "Nazwa gracza";
-            PlayerName.Click += label2_Click;
             // 
             // map
             // 
@@ -384,6 +404,13 @@
             // Villages
             // 
             Villages.BackColor = Color.SaddleBrown;
+            Villages.Controls.Add(label11);
+            Villages.Controls.Add(label10);
+            Villages.Controls.Add(label9);
+            Villages.Controls.Add(label8);
+            Villages.Controls.Add(label7);
+            Villages.Controls.Add(label6);
+            Villages.Controls.Add(ArcherAmount);
             Villages.Controls.Add(pictureBox12);
             Villages.Controls.Add(pictureBox11);
             Villages.Controls.Add(pictureBox10);
@@ -395,7 +422,6 @@
             Villages.Controls.Add(KamikadzeAmount);
             Villages.Controls.Add(HussarAmount);
             Villages.Controls.Add(CatapultAmount);
-            Villages.Controls.Add(ArcherAmount);
             Villages.Controls.Add(label5);
             Villages.Controls.Add(label2);
             Villages.Controls.Add(BuildingsList);
@@ -406,6 +432,70 @@
             Villages.TabIndex = 12;
             Villages.TabStop = false;
             Villages.Text = "nazwa wioski";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(112, 557);
+            label11.Name = "label11";
+            label11.Size = new Size(89, 20);
+            label11.TabIndex = 37;
+            label11.Text = "[wojownicy]";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(112, 496);
+            label10.Name = "label10";
+            label10.Size = new Size(65, 20);
+            label10.TabIndex = 36;
+            label10.Text = "[trojany]";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(112, 441);
+            label9.Name = "label9";
+            label9.Size = new Size(90, 20);
+            label9.TabIndex = 35;
+            label9.Text = "[kamikadze]";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(112, 385);
+            label8.Name = "label8";
+            label8.Size = new Size(68, 20);
+            label8.TabIndex = 34;
+            label8.Text = "[husarzy]";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(112, 334);
+            label7.Name = "label7";
+            label7.Size = new Size(80, 20);
+            label7.TabIndex = 33;
+            label7.Text = "[katapulty]";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(112, 279);
+            label6.Name = "label6";
+            label6.Size = new Size(71, 20);
+            label6.TabIndex = 32;
+            label6.Text = "[łucznicy]";
+            // 
+            // ArcherAmount
+            // 
+            ArcherAmount.AutoSize = true;
+            ArcherAmount.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            ArcherAmount.Location = new Point(67, 279);
+            ArcherAmount.Name = "ArcherAmount";
+            ArcherAmount.Size = new Size(18, 20);
+            ArcherAmount.TabIndex = 31;
+            ArcherAmount.Text = "0";
             // 
             // pictureBox12
             // 
@@ -464,56 +554,52 @@
             // WarriorAmount
             // 
             WarriorAmount.AutoSize = true;
-            WarriorAmount.Location = new Point(75, 557);
+            WarriorAmount.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            WarriorAmount.Location = new Point(67, 557);
             WarriorAmount.Name = "WarriorAmount";
-            WarriorAmount.Size = new Size(56, 20);
+            WarriorAmount.Size = new Size(18, 20);
             WarriorAmount.TabIndex = 24;
-            WarriorAmount.Text = "warrior";
+            WarriorAmount.Text = "0";
             // 
             // TrojanAmount
             // 
             TrojanAmount.AutoSize = true;
-            TrojanAmount.Location = new Point(75, 496);
+            TrojanAmount.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            TrojanAmount.Location = new Point(67, 496);
             TrojanAmount.Name = "TrojanAmount";
-            TrojanAmount.Size = new Size(48, 20);
+            TrojanAmount.Size = new Size(18, 20);
             TrojanAmount.TabIndex = 23;
-            TrojanAmount.Text = "trojan";
+            TrojanAmount.Text = "0";
             // 
             // KamikadzeAmount
             // 
             KamikadzeAmount.AutoSize = true;
-            KamikadzeAmount.Location = new Point(75, 441);
+            KamikadzeAmount.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            KamikadzeAmount.Location = new Point(67, 441);
             KamikadzeAmount.Name = "KamikadzeAmount";
-            KamikadzeAmount.Size = new Size(80, 20);
+            KamikadzeAmount.Size = new Size(18, 20);
             KamikadzeAmount.TabIndex = 22;
-            KamikadzeAmount.Text = "kamikadze";
+            KamikadzeAmount.Text = "0";
             // 
             // HussarAmount
             // 
             HussarAmount.AutoSize = true;
-            HussarAmount.Location = new Point(75, 387);
+            HussarAmount.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            HussarAmount.Location = new Point(67, 385);
             HussarAmount.Name = "HussarAmount";
-            HussarAmount.Size = new Size(56, 20);
+            HussarAmount.Size = new Size(18, 20);
             HussarAmount.TabIndex = 21;
-            HussarAmount.Text = "hussars";
+            HussarAmount.Text = "0";
             // 
             // CatapultAmount
             // 
             CatapultAmount.AutoSize = true;
-            CatapultAmount.Location = new Point(75, 334);
+            CatapultAmount.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            CatapultAmount.Location = new Point(67, 334);
             CatapultAmount.Name = "CatapultAmount";
-            CatapultAmount.Size = new Size(69, 20);
+            CatapultAmount.Size = new Size(18, 20);
             CatapultAmount.TabIndex = 20;
-            CatapultAmount.Text = "catapults";
-            // 
-            // ArcherAmount
-            // 
-            ArcherAmount.AutoSize = true;
-            ArcherAmount.Location = new Point(75, 279);
-            ArcherAmount.Name = "ArcherAmount";
-            ArcherAmount.Size = new Size(56, 20);
-            ArcherAmount.TabIndex = 19;
-            ArcherAmount.Text = "archers";
+            CatapultAmount.Text = "0";
             // 
             // label5
             // 
@@ -561,10 +647,12 @@
             // 
             // ResourcesForUpgrade
             // 
+            ResourcesForUpgrade.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 238);
             ResourcesForUpgrade.FormattingEnabled = true;
-            ResourcesForUpgrade.Location = new Point(6, 290);
+            ResourcesForUpgrade.ItemHeight = 17;
+            ResourcesForUpgrade.Location = new Point(6, 288);
             ResourcesForUpgrade.Name = "ResourcesForUpgrade";
-            ResourcesForUpgrade.Size = new Size(208, 104);
+            ResourcesForUpgrade.Size = new Size(211, 89);
             ResourcesForUpgrade.TabIndex = 1;
             // 
             // UpgradeButton
@@ -572,7 +660,7 @@
             UpgradeButton.ForeColor = Color.Black;
             UpgradeButton.Location = new Point(6, 244);
             UpgradeButton.Name = "UpgradeButton";
-            UpgradeButton.Size = new Size(208, 29);
+            UpgradeButton.Size = new Size(211, 29);
             UpgradeButton.TabIndex = 15;
             UpgradeButton.Text = "Ulepsz!";
             UpgradeButton.UseVisualStyleBackColor = true;
@@ -594,7 +682,7 @@
             BuildingProperty.FormattingEnabled = true;
             BuildingProperty.Location = new Point(6, 45);
             BuildingProperty.Name = "BuildingProperty";
-            BuildingProperty.Size = new Size(208, 184);
+            BuildingProperty.Size = new Size(211, 184);
             BuildingProperty.TabIndex = 13;
             // 
             // groupBox4
@@ -647,7 +735,7 @@
             ResourcesForBuilding.FormattingEnabled = true;
             ResourcesForBuilding.Location = new Point(6, 30);
             ResourcesForBuilding.Name = "ResourcesForBuilding";
-            ResourcesForBuilding.Size = new Size(214, 104);
+            ResourcesForBuilding.Size = new Size(217, 104);
             ResourcesForBuilding.TabIndex = 0;
             // 
             // SawMill
@@ -700,6 +788,7 @@
             IronMine.TabStop = false;
             IronMine.Visible = false;
             IronMine.Click += IronMine_Click;
+            IronMine.Paint += IronMine_Paint;
             // 
             // Barracks
             // 
@@ -725,7 +814,9 @@
             Armories.TabIndex = 21;
             Armories.TabStop = false;
             Armories.Visible = false;
-            Armories.Click += pictureBox13_Click;
+            Armories.Click += Armories_Click;
+            Armories.Paint += Armories_Paint;
+            Armories.DoubleClick += Armory_DoubleClick;
             // 
             // Walls
             // 
@@ -738,7 +829,7 @@
             Walls.TabIndex = 22;
             Walls.TabStop = false;
             Walls.Visible = false;
-            Walls.Click += pictureBox13_Click_1;
+            Walls.Click += Walls_Click;
             // 
             // horses
             // 
@@ -750,6 +841,8 @@
             horses.TabIndex = 23;
             horses.TabStop = false;
             horses.Visible = false;
+            horses.Click += horses_Click;
+            horses.Paint += Horse_Paint;
             // 
             // silo
             // 
@@ -761,14 +854,15 @@
             silo.TabIndex = 24;
             silo.TabStop = false;
             silo.Visible = false;
-            silo.Click += pictureBox6_Click;
+            silo.Click += silo_Click;
+            silo.Paint += Silo_Paint;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Snow;
-            ClientSize = new Size(1115, 834);
+            ClientSize = new Size(1115, 735);
             Controls.Add(silo);
             Controls.Add(horses);
             Controls.Add(Walls);
@@ -865,7 +959,6 @@
         private Label label5;
         private Label HussarAmount;
         private Label CatapultAmount;
-        private Label ArcherAmount;
         private Label WarriorAmount;
         private Label TrojanAmount;
         private Label KamikadzeAmount;
@@ -896,5 +989,14 @@
         private Button UpgradeButton;
         private ListBox listBox1;
         private ListBox ResourcesForUpgrade;
+        private Label ArcherAmount;
+        private Label label6;
+        private Label label7;
+        private Label label11;
+        private Label label10;
+        private Label label9;
+        private Label label8;
+        private ToolStripMenuItem wczytajGraczaToolStripMenuItem;
+        private ToolStripMenuItem zapiszGraczaToolStripMenuItem;
     }
 }
