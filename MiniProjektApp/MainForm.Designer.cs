@@ -52,7 +52,7 @@
             PlayerLevel = new Label();
             label1 = new Label();
             PlayerName = new Label();
-            pictureBox6 = new PictureBox();
+            Walls = new PictureBox();
             TownHall = new PictureBox();
             Villages = new GroupBox();
             pictureBox12 = new PictureBox();
@@ -84,6 +84,8 @@
             StoneMine = new PictureBox();
             IronMine = new PictureBox();
             Barracks = new PictureBox();
+            Armories = new PictureBox();
+            pictureBox13 = new PictureBox();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -93,7 +95,7 @@
             groupBox1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Walls).BeginInit();
             ((System.ComponentModel.ISupportInitialize)TownHall).BeginInit();
             Villages.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
@@ -110,6 +112,8 @@
             ((System.ComponentModel.ISupportInitialize)StoneMine).BeginInit();
             ((System.ComponentModel.ISupportInitialize)IronMine).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Barracks).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Armories).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -351,14 +355,15 @@
             PlayerName.Text = "Nazwa gracza";
             PlayerName.Click += label2_Click;
             // 
-            // pictureBox6
+            // Walls
             // 
-            pictureBox6.Image = Properties.Resources.map6;
-            pictureBox6.Location = new Point(223, 125);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(660, 400);
-            pictureBox6.TabIndex = 10;
-            pictureBox6.TabStop = false;
+            Walls.Image = Properties.Resources.map6;
+            Walls.Location = new Point(223, 125);
+            Walls.Name = "Walls";
+            Walls.Size = new Size(660, 400);
+            Walls.TabIndex = 10;
+            Walls.TabStop = false;
+            Walls.Visible = false;
             // 
             // TownHall
             // 
@@ -696,12 +701,39 @@
             Barracks.Paint += Barracks_Paint;
             Barracks.DoubleClick += Barracks_DoubleClick;
             // 
+            // Armories
+            // 
+            Armories.BackgroundImage = Properties.Resources.map10;
+            Armories.Image = Properties.Resources.armory;
+            Armories.Location = new Point(339, 387);
+            Armories.Name = "Armories";
+            Armories.Size = new Size(50, 50);
+            Armories.TabIndex = 21;
+            Armories.TabStop = false;
+            Armories.Visible = false;
+            Armories.Click += pictureBox13_Click;
+            // 
+            // pictureBox13
+            // 
+            pictureBox13.BackgroundImage = Properties.Resources.map10;
+            pictureBox13.Image = Properties.Resources.wall;
+            pictureBox13.InitialImage = Properties.Resources.wall;
+            pictureBox13.Location = new Point(528, 147);
+            pictureBox13.Name = "pictureBox13";
+            pictureBox13.Size = new Size(100, 48);
+            pictureBox13.TabIndex = 22;
+            pictureBox13.TabStop = false;
+            pictureBox13.Visible = false;
+            pictureBox13.Click += pictureBox13_Click_1;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Snow;
             ClientSize = new Size(1115, 834);
+            Controls.Add(pictureBox13);
+            Controls.Add(Armories);
             Controls.Add(Barracks);
             Controls.Add(IronMine);
             Controls.Add(StoneMine);
@@ -712,7 +744,7 @@
             Controls.Add(groupBox3);
             Controls.Add(Villages);
             Controls.Add(TownHall);
-            Controls.Add(pictureBox6);
+            Controls.Add(Walls);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
@@ -732,7 +764,7 @@
             flowLayoutPanel1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Walls).EndInit();
             ((System.ComponentModel.ISupportInitialize)TownHall).EndInit();
             Villages.ResumeLayout(false);
             Villages.PerformLayout();
@@ -751,6 +783,8 @@
             ((System.ComponentModel.ISupportInitialize)StoneMine).EndInit();
             ((System.ComponentModel.ISupportInitialize)IronMine).EndInit();
             ((System.ComponentModel.ISupportInitialize)Barracks).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Armories).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -779,7 +813,7 @@
         private ProgressBar PlayerExp;
         private Label label4;
         private Label PlayerLevel;
-        private PictureBox pictureBox6;
+        private PictureBox Walls;
         private PictureBox TownHall;
         private GroupBox Villages;
         private Label label2;
@@ -812,5 +846,7 @@
         private PictureBox StoneMine;
         private PictureBox IronMine;
         private PictureBox Barracks;
+        private PictureBox Armories;
+        private PictureBox pictureBox13;
     }
 }

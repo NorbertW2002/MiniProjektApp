@@ -246,6 +246,8 @@ namespace MiniProjektApp
                 {
                     case "Armory":
                         player.Villages[0].AddBuilding(new Armory("Armory", 1));
+                        player.AddExp(20);
+                        Armories.Visible = true;
                         break;
                     case "Barracks":
                         player.Villages[0].AddBuilding(new Barracks("Barracks", 1));
@@ -254,6 +256,8 @@ namespace MiniProjektApp
                         break;
                     case "Defensive Walls":
                         player.Villages[0].AddBuilding(new DefensiveWalls("Defensive Walls", 1));
+                        player.AddExp(35);
+                        Walls.Visible = true;
                         break;
                     case "Grain Farm":
                         player.Villages[0].AddBuilding(new GrainFarm("Grain Farm", 1));
@@ -407,6 +411,16 @@ namespace MiniProjektApp
         {
             if (Barracks.Tag == null) { Barracks.Tag = Color.Transparent; } // Brak obramowania jako domyślny kolor
             ControlPaint.DrawBorder(e.Graphics, Barracks.ClientRectangle, (Color)Barracks.Tag, ButtonBorderStyle.Solid);
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox13_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

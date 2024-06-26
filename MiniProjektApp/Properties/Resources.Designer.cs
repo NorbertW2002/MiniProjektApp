@@ -73,6 +73,16 @@ namespace MiniProjektApp.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap armory {
+            get {
+                object obj = ResourceManager.GetObject("armory", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap barracks {
             get {
                 object obj = ResourceManager.GetObject("barracks", resourceCulture);
@@ -336,6 +346,16 @@ namespace MiniProjektApp.Properties {
         internal static System.Drawing.Bitmap trojan {
             get {
                 object obj = ResourceManager.GetObject("trojan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wall {
+            get {
+                object obj = ResourceManager.GetObject("wall", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
