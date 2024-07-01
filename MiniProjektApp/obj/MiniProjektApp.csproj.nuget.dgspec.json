@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nw862\\Source\\Repos\\MiniProjektApp\\MiniProjektApp\\MiniProjektApp.csproj": {}
+    "C:\\Users\\nw862\\source\\repos\\MiniProjektApp\\MiniProjektApp\\MiniProjektApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nw862\\Source\\Repos\\MiniProjektApp\\MiniProjektApp\\MiniProjektApp.csproj": {
+    "C:\\Users\\nw862\\source\\repos\\MiniProjektApp\\MiniProjektApp\\MiniProjektApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nw862\\Source\\Repos\\MiniProjektApp\\MiniProjektApp\\MiniProjektApp.csproj",
+        "projectUniqueName": "C:\\Users\\nw862\\source\\repos\\MiniProjektApp\\MiniProjektApp\\MiniProjektApp.csproj",
         "projectName": "MiniProjektApp",
-        "projectPath": "C:\\Users\\nw862\\Source\\Repos\\MiniProjektApp\\MiniProjektApp\\MiniProjektApp.csproj",
+        "projectPath": "C:\\Users\\nw862\\source\\repos\\MiniProjektApp\\MiniProjektApp\\MiniProjektApp.csproj",
         "packagesPath": "C:\\Users\\nw862\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nw862\\Source\\Repos\\MiniProjektApp\\MiniProjektApp\\obj\\",
+        "outputPath": "C:\\Users\\nw862\\source\\repos\\MiniProjektApp\\MiniProjektApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nw862\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\nw862\\Source\\Repos\\MiniProjektApp\\miniprojekt\\MiniProjekt.csproj": {
-                "projectPath": "C:\\Users\\nw862\\Source\\Repos\\MiniProjektApp\\miniprojekt\\MiniProjekt.csproj"
+              "C:\\Users\\nw862\\source\\repos\\MiniProjektApp\\miniprojekt\\MiniProjekt.csproj": {
+                "projectPath": "C:\\Users\\nw862\\source\\repos\\MiniProjektApp\\miniprojekt\\MiniProjekt.csproj"
               }
             }
           }
@@ -66,14 +66,14 @@
         }
       }
     },
-    "C:\\Users\\nw862\\Source\\Repos\\MiniProjektApp\\miniprojekt\\MiniProjekt.csproj": {
+    "C:\\Users\\nw862\\source\\repos\\MiniProjektApp\\miniprojekt\\MiniProjekt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nw862\\Source\\Repos\\MiniProjektApp\\miniprojekt\\MiniProjekt.csproj",
+        "projectUniqueName": "C:\\Users\\nw862\\source\\repos\\MiniProjektApp\\miniprojekt\\MiniProjekt.csproj",
         "projectName": "MiniProjekt",
-        "projectPath": "C:\\Users\\nw862\\Source\\Repos\\MiniProjektApp\\miniprojekt\\MiniProjekt.csproj",
+        "projectPath": "C:\\Users\\nw862\\source\\repos\\MiniProjektApp\\miniprojekt\\MiniProjekt.csproj",
         "packagesPath": "C:\\Users\\nw862\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nw862\\Source\\Repos\\MiniProjektApp\\miniprojekt\\obj\\",
+        "outputPath": "C:\\Users\\nw862\\source\\repos\\MiniProjektApp\\miniprojekt\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nw862\\AppData\\Roaming\\NuGet\\NuGet.Config",

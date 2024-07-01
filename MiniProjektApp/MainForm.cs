@@ -14,7 +14,7 @@ namespace MiniProjektApp
         private System.Windows.Forms.Timer StoneTimer;
         private System.Windows.Forms.Timer GrainTimer;
         private System.Windows.Forms.Timer WoodTimer;
-        public static int timeDelay = 1;
+        public static int timeDelay = 100;
         private string CurrentSelectedItem;
         public MainForm()
         {

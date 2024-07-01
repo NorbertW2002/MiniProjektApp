@@ -59,29 +59,34 @@ namespace MiniProjektApp
         }
         private void EntitiesList_SelectedIndexChanged(object sender, EventArgs e)
         {
+            GoldRequired.Text = "0";
+            WheatRequired.Text = "0";
             EntityProperties.Items.Clear();
             string selectedItem = EntitiesList.SelectedItem?.ToString();
-            string[] splitString = selectedItem.Split(',');
-            string[] idSplit = splitString[0].Split(':');
-            int id = Int32.Parse(idSplit[1]);
-            string[] props = Entites[id].ToString().Split(';');
-            foreach (string prop in props)
+            if (selectedItem != null)
             {
-                EntityProperties.Items.Add(prop);
-            }
-            int level = Entites[id].Level;
-            string name = Entites[id].Name;
-            ResourcesNeeded resourcesNeeded = new ResourcesNeeded();
-            List<Resource> resources = resourcesNeeded.ResourcesForEntityUpgrade(name, level);
-            foreach (Resource resource in resources)
-            {
-                if (resource.Name == "Gold")
+                string[] splitString = selectedItem.Split(',');
+                string[] idSplit = splitString[0].Split(':');
+                int id = Int32.Parse(idSplit[1]);
+                string[] props = Entites[id].ToString().Split(';');
+                foreach (string prop in props)
                 {
-                    GoldRequired.Text = (int.Parse(GoldRequired.Text) + resource.Amount).ToString();
+                    EntityProperties.Items.Add(prop);
                 }
-                else if (resource.Name == "Wheat")
+                int level = Entites[id].Level;
+                string name = Entites[id].Name;
+                ResourcesNeeded resourcesNeeded = new ResourcesNeeded();
+                List<Resource> resources = resourcesNeeded.ResourcesForEntityUpgrade(name, level);
+                foreach (Resource resource in resources)
                 {
-                    WheatRequired.Text = (int.Parse(WheatRequired.Text) + resource.Amount).ToString();
+                    if (resource.Name == "Gold")
+                    {
+                        GoldRequired.Text = (int.Parse(GoldRequired.Text) + resource.Amount).ToString();
+                    }
+                    else if (resource.Name == "Wheat")
+                    {
+                        WheatRequired.Text = (int.Parse(WheatRequired.Text) + resource.Amount).ToString();
+                    }
                 }
             }
         }
