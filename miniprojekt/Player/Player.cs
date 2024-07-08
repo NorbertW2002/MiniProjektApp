@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace MiniProjekt
@@ -17,6 +18,11 @@ namespace MiniProjekt
         public List<Village> Villages { get; set; }
         public event PlayerExpAction OnExpGained;
         public event PlayerAction OnLvlGained;
+        public event PlayerAction OnEntitesAdded;
+        public event PlayerAction OnUpgrade;
+        public event PlayerAction OnBuild;
+        public event PlayerAction OnEntityUpgrade;
+        [JsonConstructor]
         public Player(string Name, int Level, int CurrentExperience, List<Resource> resources, Fraction fraction, List<Village> villages)
         {
             this.Name = Name;
@@ -26,7 +32,6 @@ namespace MiniProjekt
             this.Fraction = fraction;
             this.Villages = villages;
         }
-
         public Player(string Name)
         {
             this.Name = Name;
@@ -97,6 +102,43 @@ namespace MiniProjekt
                     playerResource.Amount -= required.Amount; 
                 }
             }
+            OnBuild?.Invoke(this);
+        }
+        public void afterEntitesRecruited(List<Resource> requiredResources)
+        {
+            foreach (var required in requiredResources)
+            {
+                var playerResource = Resources.FirstOrDefault(r => r.Name == required.Name);
+                if (playerResource != null)
+                {
+                    playerResource.Amount -= required.Amount;
+                }
+            }
+            OnEntitesAdded?.Invoke(this);
+        }
+        public void afterUpgrade(List<Resource> requiredResources)
+        {
+            foreach (var required in requiredResources)
+            {
+                var playerResource = Resources.FirstOrDefault(r => r.Name == required.Name);
+                if (playerResource != null)
+                {
+                    playerResource.Amount -= required.Amount;
+                }
+            }
+            OnUpgrade?.Invoke(this);
+        }
+        public void afterEntityUpgrade(List<Resource> requiredResources)
+        {
+            foreach (var required in requiredResources)
+            {
+                var playerResource = Resources.FirstOrDefault(r => r.Name == required.Name);
+                if (playerResource != null)
+                {
+                    playerResource.Amount -= required.Amount;
+                }
+            }
+            OnEntityUpgrade?.Invoke(this);
         }
         public override string ToString()
         {

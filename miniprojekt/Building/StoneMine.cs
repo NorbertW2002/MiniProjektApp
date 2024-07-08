@@ -8,6 +8,20 @@ namespace MiniProjekt
 {
     public class StoneMine:Building
     {
+        private int level = 1;
+        public override int Level
+        {
+            get => level;
+            set
+            {
+                if (value <= MaxBuildingLevel)
+                {
+                    level = value;
+                    UpdateProperties();
+                }
+            }
+        }
+        public int MaxBuildingLevel { get; set; }
         public int GenerateStonePerTime { get; set; }
         public int MaxStonePerTime { get; set; }
 
@@ -15,16 +29,18 @@ namespace MiniProjekt
 
         public StoneMine(string Name, int Level): base(Name, Level)
         {
-            this.GenerateStonePerTime = 10;
-            this.MaxStonePerTime = 500;
-            this.Time = 35;
+            GenerateStonePerTime = 10;
+            MaxStonePerTime = 500;
+            Time = 35;
+            MaxBuildingLevel = 5;
         }
 
-        public StoneMine() : base()
+        private void UpdateProperties()
         {
-            this.GenerateStonePerTime = 0;
+            GenerateStonePerTime = 10 + (Level - 1) * 5;
+            MaxStonePerTime = 500 + (Level - 1) * 100;
+            Time = 35 - (Level - 1) * 2;
         }
-
         public override string ToString()
         {
             return base.ToString() + $"GenerateStonePerTime: {GenerateStonePerTime}\n";

@@ -8,23 +8,37 @@ namespace MiniProjekt
 {
     public class Sawmill:Building
     {
+        private int level = 1;
+        public override int Level
+        {
+            get => level;
+            set
+            {
+                if (value <= MaxBuildingLevel)
+                {
+                    level = value;
+                    UpdateProperties();
+                }
+            }
+        }
         public int GenerateWoodPerTime { get; set; }
         public int MaxWoodPerTime { get; set; }
 
         public int Time { get; set; }
-
+        public int MaxBuildingLevel { get; set; }
         public Sawmill(string Name, int Level):base(Name, Level)
         {
-            this.GenerateWoodPerTime = 10;
-            this.MaxWoodPerTime = 500;
-            this.Time = 30;
+            GenerateWoodPerTime = 10;
+            MaxWoodPerTime = 500;
+            Time = 30;
+            MaxBuildingLevel = 5;
         }
-
-        public Sawmill() : base()
+        private void UpdateProperties()
         {
-            this.GenerateWoodPerTime = 0;
+            GenerateWoodPerTime = 10 + (Level - 1) * 5;
+            MaxWoodPerTime = 500 + (Level - 1) * 100;
+            Time = 30 - (Level - 1) * 2;
         }
-
         public override string ToString()
         {
             return base.ToString() + $"GenerateWoodPerTime: {GenerateWoodPerTime}\n";
