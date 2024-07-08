@@ -1,79 +1,79 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="MiniProjekt.Armory">
-    <Position X="0.5" Y="3" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Building\Armory.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="MiniProjekt.Barracks">
-    <Position X="16.25" Y="3" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
-      <FileName>Building\Barracks.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="MiniProjekt.Building">
-    <Position X="7.75" Y="0.5" Width="1.5" />
+    <Position X="3.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAQAAAAAAAABAAAAAAAAAAA=</HashCode>
       <FileName>Building\Building.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MiniProjekt.DefensiveWalls">
+  <Class Name="MiniProjekt.Armory">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAIgEAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Building\Armory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniProjekt.Barracks">
     <Position X="2.25" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAEAAAAAAAAEAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAABAAIgEAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Building\Barracks.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniProjekt.DefensiveWalls">
+    <Position X="4" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAIgEAEAABAAAAAEAAAAA=</HashCode>
       <FileName>Building\DefensiveWalls.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MiniProjekt.GrainFarm">
-    <Position X="4" Y="3" Width="1.5" />
+    <Position X="5.75" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAACAAAAAAAEEAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <HashCode>AAAAAACAAAAAAAEEAAAAAAAAIgEAAAABAAAAAAAAAQA=</HashCode>
       <FileName>Building\GrainFarm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MiniProjekt.HorseStable">
-    <Position X="5.75" Y="3" Width="1.5" />
+    <Position X="7.5" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAIAAAAAAAAAEAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAIAAAAAAAAAEAAAAAAAAIgEAAAADAAAAAAAAAAA=</HashCode>
       <FileName>Building\HorseStable.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MiniProjekt.IronMine">
-    <Position X="7.5" Y="3" Width="1.5" />
+    <Position X="9.25" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAATA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAIgEAAAABAAAAAAAAATA=</HashCode>
       <FileName>Building\IronMine.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MiniProjekt.Sawmill">
-    <Position X="9.25" Y="3" Width="1.5" />
+    <Position X="11" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAABAAEAAAAgAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <HashCode>AAAAAAAAAAAABAAEAAAAgAAAIgEAAAABAAAAAAAAAQA=</HashCode>
       <FileName>Building\Sawmill.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MiniProjekt.Silo">
-    <Position X="11" Y="3" Width="1.5" />
+    <Position X="12.75" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAIAAAAgAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Building\Silo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MiniProjekt.StoneMine">
-    <Position X="12.75" Y="3" Width="1.5" />
+    <Position X="14.5" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAgAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <HashCode>AAgAAAAAAAAAAAAEAAAAAAAAIgEAAAABAAAAAAAAAQA=</HashCode>
       <FileName>Building\StoneMine.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MiniProjekt.TownHall">
-    <Position X="14.5" Y="3" Width="1.5" />
+    <Position X="16.25" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAAAAAAQAAAAEAAAAAAAAIAAAAAAAAAAAAAAAAQA=</HashCode>
+      <HashCode>AAABAAAAAAQAAAAEAAAAAAAAIgEAAAABAAAAAAAAAQA=</HashCode>
       <FileName>Building\TownHall.cs</FileName>
     </TypeIdentifier>
   </Class>
