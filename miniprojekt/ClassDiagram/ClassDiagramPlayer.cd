@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MiniProjekt.Expedition">
+    <Position X="0.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABIAAAAAAEAAAAAAQAAAAAAAABAAEBAAAAAAA=</HashCode>
+      <FileName>Player\Expedition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniProjekt.Fraction">
+    <Position X="2.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAEAAAAAAQAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Player\Fraction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniProjekt.Player">
+    <Position X="4.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAABAAIAAACAAEAAABBAwAAAAAAAEBEAAAAAAAAAg=</HashCode>
+      <FileName>Player\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MiniProjekt.Village">
+    <Position X="6.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAgAEAAAAEAQAAAAAAAAAAIEAAAAAAAA=</HashCode>
+      <FileName>Player\Village.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
